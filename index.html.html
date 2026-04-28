@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aléssio Vigia — Segurança 24h sem investimento. Tudo incluído.</title>
+<meta name="description" content="Aléssio Vigia: câmeras, alarmes e monitoramento 24h por uma mensalidade fixa. Sem comprar equipamento. Sem dor de cabeça. Em Mato Grosso do Sul.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --night: #141414;
+    --steel: #1f1f1f;
+    --char: #2a2a2a;
+    --fog: #6b6b6b;
+    --mist: #999999;
+    --paper: #f5f5f5;
+    --bone: #e0e0e0;
+    --gold: #d4a017;
+    --gold-bright: #f1c232;
+    --gold-dark: #a87f0d;
+    --bordeaux: #8b1a1a;
+    --crimson: #c41e3a;
+    --emerald: #10b981;
+    --whatsapp: #25D366;
+    --line: rgba(212, 160, 23, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--black);
+    color: var(--paper);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  /* ============= NAVBAR ============= */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .shield-logo {
+    width: 40px;
+    height: 46px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .logo-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+  }
+
+  .logo-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    color: var(--mist);
+    margin-top: 4px;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .nav-cta {
+    background: var(--whatsapp);
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-cta:hover {
+    background: #1ebe5a;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+
+  /* ============= HERO ============= */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 2.5rem 4rem;
+    position: relative;
+    background:
+      radial-gradient(ellipse at top right, rgba(212, 160, 23, 0.15), transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(139, 26, 26, 0.2), transparent 50%),
+      var(--black);
+  }
+
+  .hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(212, 160, 23, 0.1);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--gold);
+  }
+
+  h1.hero-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1.hero-title .gold {
+    color: var(--gold);
+  }
+
+  h1.hero-title .strike {
+    position: relative;
+    color: var(--mist);
+    font-weight: 600;
+  }
+
+  h1.hero-title .strike::after {
+    content: '';
+    position: absolute;
+    left: -3%;
+    right: -3%;
+    top: 55%;
+    height: 5px;
+    background: var(--crimson);
+    transform: rotate(-3deg);
+  }
+
+  .hero-sub {
+    font-size: 1.3rem;
+    color: var(--bone);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+  }
+
+  .hero-sub strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .btn-whatsapp-big {
+    background: var(--whatsapp);
+    color: white;
+    padding: 1.3rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+  }
+
+  .btn-whatsapp-big:hover {
+    background: #1ebe5a;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+  }
+
+  .btn-whatsapp-big svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-trust {
+    color: var(--mist);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .hero-trust strong {
+    color: var(--gold);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--mist);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  /* ============= COMPARISON ============= */
+  .comparison {
+    padding: 6rem 2.5rem;
+    background: var(--night);
+  }
+
+  .comp-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-eyebrow {
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  h2.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+
+  h2.section-title .gold {
+    color: var(--gold);
+  }
+
+  .section-sub {
+    color: var(--mist);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .comp-card {
+    background: var(--steel);
+    border-radius: 12px;
+    padding: 2.5rem;
+    border: 1px solid var(--line);
+    position: relative;
+  }
+
+  .comp-card.bad {
+    border-color: rgba(196, 30, 58, 0.3);
+  }
+
+  .comp-card.good {
+    border-color: var(--gold);
+    background: linear-gradient(180deg, rgba(212, 160, 23, 0.05), var(--steel));
+  }
+
+  .comp-tag {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+
+  .comp-card.bad .comp-tag {
+    background: rgba(196, 30, 58, 0.15);
+    color: var(--crimson);
+  }
+
+  .comp-card.good .comp-tag {
+    background: rgba(212, 160, 23, 0.2);
+    color: var(--gold);
+  }
+
+  .comp-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .comp-list {
+    list-style: none;
+  }
+
+  .comp-list li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.98rem;
+    color: var(--bone);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .comp-list li:last-child {
+    border-bottom: none;
+  }
+
+  .comp-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-weight: 700;
+    width: 20px;
+    text-align: center;
+  }
+
+  .comp-card.bad .comp-icon {
+    color: var(--crimson);
+  }
+
+  .comp-card.good .comp-icon {
+    color: var(--emerald);
+  }
+
+  /* ============= PLANS ============= */
+  .plans {
+    padding: 6rem 2.5rem;
+    background:
+      radial-gradient(ellipse at top, rgba(212, 160, 23, 0.08), transparent 70%),
+      var(--black);
+  }
+
+  .plans-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .plans-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .plan {
+    background: var(--steel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+  }
+
+  .plan.featured {
+    background: linear-gradient(180deg, rgba(212, 160, 23, 0.08), var(--steel));
+    border: 2px solid var(--gold);
+    transform: scale(1.04);
+    box-shadow: 0 30px 60px rgba(212, 160, 23, 0.15);
+  }
+
+  .plan.featured:hover {
+    transform: scale(1.04) translateY(-8px);
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--black);
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .plan-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .plan-tagline {
+    color: var(--mist);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .plan-price {
+    margin-bottom: 2.25rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-currency {
+    font-size: 1.25rem;
+    color: var(--mist);
+    font-weight: 600;
+  }
+
+  .price-amount {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+  }
+
+  .plan.featured .price-amount {
+    color: var(--gold);
+  }
+
+  .price-period {
+    color: var(--mist);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .price-note {
+    font-size: 0.85rem;
+    color: var(--mist);
+    margin-top: 0.5rem;
+  }
+
+  .plan-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+  }
+
+  .plan-features li {
+    padding: 0.65rem 0;
+    color: var(--bone);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    line-height: 1.45;
+  }
+
+  .plan-check {
+    color: var(--emerald);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .plan.featured .plan-check {
+    color: var(--gold);
+  }
+
+  .plan-cta {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 2px solid var(--whatsapp);
+    background: transparent;
+    color: var(--whatsapp);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .plan-cta:hover {
+    background: var(--whatsapp);
+    color: white;
+  }
+
+  .plan.featured .plan-cta {
+    background: var(--whatsapp);
+    color: white;
+  }
+
+  .plan.featured .plan-cta:hover {
+    background: #1ebe5a;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  }
+
+  .plan-cta svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .plans-disclaimer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--mist);
+    font-size: 0.95rem;
+  }
+
+  /* ============= INCLUDED ============= */
+  .included {
+    padding: 6rem 2.5rem;
+    background: var(--black);
+  }
+
+  .inc-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .inc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .inc-card {
+    background: var(--steel);
+    border: 1px solid var(--line);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .inc-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .inc-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .inc-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .inc-card p {
+    color: var(--mist);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /* ============= HOW IT WORKS ============= */
+  .how {
+    padding: 6rem 2.5rem;
+    background: var(--night);
+  }
+
+  .how-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .how-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .how-steps::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .step-num {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border: 4px solid var(--night);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--black);
+    box-shadow: 0 10px 25px rgba(212, 160, 23, 0.3);
+  }
+
+  .step h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .step p {
+    color: var(--mist);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* ============= GUARANTEE ============= */
+  .guarantee {
+    padding: 6rem 2.5rem;
+    background:
+      radial-gradient(ellipse at center, rgba(212, 160, 23, 0.15), transparent 70%),
+      var(--black);
+    text-align: center;
+  }
+
+  .guarantee-content {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px dashed var(--gold);
+    padding: 4rem 3rem;
+    border-radius: 16px;
+    background: rgba(31, 31, 31, 0.6);
+  }
+
+  .seal {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--black);
+    box-shadow: 0 20px 50px rgba(212, 160, 23, 0.4);
+    position: relative;
+  }
+
+  .seal::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  .guarantee h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .guarantee p {
+    color: var(--bone);
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .guarantee p strong {
+    color: var(--gold);
+  }
+
+  /* ============= FAQ ============= */
+  .faq {
+    padding: 6rem 2.5rem;
+    background: var(--night);
+  }
+
+  .faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .faq-item {
+    background: var(--steel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  .faq-item:hover {
+    border-color: var(--gold);
+  }
+
+  .faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s;
+    user-select: none;
+  }
+
+  .faq-question:hover {
+    color: var(--gold);
+  }
+
+  .faq-toggle {
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+
+  .faq-item.open .faq-toggle {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .faq-item.open .faq-answer {
+    max-height: 500px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--mist);
+    line-height: 1.7;
+  }
+
+  /* ============= CTA FINAL ============= */
+  .cta-final {
+    padding: 7rem 2.5rem;
+    background:
+      radial-gradient(ellipse at top, rgba(37, 211, 102, 0.1), transparent 60%),
+      var(--black);
+    text-align: center;
+  }
+
+  .cta-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .cta-final h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+  }
+
+  .cta-final h2 .gold {
+    color: var(--gold);
+  }
+
+  .cta-final p {
+    color: var(--bone);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .cta-benefits {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--bone);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .cta-benefit svg {
+    color: var(--emerald);
+  }
+
+  .cta-phone {
+    margin-top: 2rem;
+    color: var(--mist);
+    font-size: 1rem;
+  }
+
+  .cta-phone strong {
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+
+  /* ============= FOOTER ============= */
+  footer {
+    padding: 3rem 2.5rem 2rem;
+    background: var(--black);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    color: var(--fog);
+    font-size: 0.9rem;
+  }
+
+  footer .logo {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+
+  /* WhatsApp Floating */
+  .wa-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 64px;
+    height: 64px;
+    background: var(--whatsapp);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    z-index: 99;
+    transition: all 0.3s;
+    animation: pulse-wa 2s infinite;
+  }
+
+  @keyframes pulse-wa {
+    0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5); }
+    50% { box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8), 0 0 0 12px rgba(37, 211, 102, 0.1); }
+  }
+
+  .wa-float:hover {
+    transform: scale(1.1);
+  }
+
+  .wa-float svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============= RESPONSIVE ============= */
+  @media (max-width: 968px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-cta { padding: 0.6rem 1rem; font-size: 0.85rem; }
+    .hero { padding: 7rem 1.25rem 4rem; }
+    .hero-stats { gap: 2.5rem; padding-top: 2rem; margin-top: 3rem; }
+    .stat-num { font-size: 2.25rem; }
+    .comparison, .included, .how, .guarantee, .faq, .cta-final, .plans { padding: 4rem 1.25rem; }
+    .comp-grid { grid-template-columns: 1fr; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .plan.featured { transform: scale(1); }
+    .plan.featured:hover { transform: translateY(-8px); }
+    .how-steps { grid-template-columns: repeat(2, 1fr); }
+    .how-steps::before { display: none; }
+    .guarantee-content { padding: 3rem 1.5rem; }
+    .cta-benefits { gap: 1rem; }
+    .wa-float { bottom: 1rem; right: 1rem; width: 56px; height: 56px; }
+    .wa-float svg { width: 28px; height: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG Definitions -->
+<svg width="0" height="0" style="position: absolute;">
+  <defs>
+    <linearGradient id="shieldGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1c232"/>
+      <stop offset="50%" stop-color="#d4a017"/>
+      <stop offset="100%" stop-color="#a87f0d"/>
+    </linearGradient>
+    <linearGradient id="shieldRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a83232"/>
+      <stop offset="100%" stop-color="#5a1010"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <svg class="shield-logo" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 2 L75 15 L75 50 Q75 75 40 88 Q5 75 5 50 L5 15 Z" fill="url(#shieldGold)" stroke="#a87f0d" stroke-width="1.5"/>
+      <path d="M40 8 L70 18 L70 50 Q70 70 40 82 Q10 70 10 50 L10 18 Z" fill="url(#shieldRed)"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-name">ALÉSSIO VIGIA</span>
+      <span class="logo-tag">Por Aléssio Segurança</span>
+    </div>
+  </div>
+  <a href="https://wa.me/5567996995728?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Aléssio%20Vigia" target="_blank" class="nav-cta">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    Falar agora
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Novo · Aléssio Vigia</div>
+    <h1 class="hero-title">
+      Proteja sua casa ou negócio <span class="gold">por menos</span> que um café por dia.
+    </h1>
+    <p class="hero-sub">
+      Câmeras, alarmes e monitoramento 24h instalados em até 7 dias. Você paga uma <strong>mensalidade fixa</strong> — a gente cuida de equipamento, manutenção e atualização. <strong>Sem investimento. Sem dor de cabeça.</strong>
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/5567996995728?text=Olá!%20Quero%20um%20orçamento%20do%20Aléssio%20Vigia" target="_blank" class="btn-whatsapp-big">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Solicitar orçamento agora
+      </a>
+    </div>
+    <p class="hero-trust">
+      <strong>Visita técnica grátis.</strong> Sem compromisso. Resposta em até 2h úteis.
+    </p>
+
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">R$ 0</span>
+        <div class="stat-label">De entrada</div>
+      </div>
+      <div>
+        <span class="stat-num">24h</span>
+        <div class="stat-label">Para trocar</div>
+      </div>
+      <div>
+        <span class="stat-num">100%</span>
+        <div class="stat-label">Manutenção inclusa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+  <div class="comp-content">
+    <span class="section-eyebrow">Comprar vs. Aléssio Vigia</span>
+    <h2 class="section-title">A conta que <span class="gold">ninguém te mostra</span><br>quando você compra um kit.</h2>
+    <p class="section-sub">Quem compra equipamento descobre os custos escondidos só depois. Veja a diferença real:</p>
+
+    <div class="comp-grid">
+      <div class="comp-card bad">
+        <span class="comp-tag">Comprando o kit</span>
+        <h3>Você paga uma vez. E paga de novo. E de novo.</h3>
+        <ul class="comp-list">
+          <li><span class="comp-icon">✕</span><span><strong>R$ 2.000 a R$ 5.000</strong> de entrada</span></li>
+          <li><span class="comp-icon">✕</span><span>Quebrou? <strong>Você paga o conserto</strong></span></li>
+          <li><span class="comp-icon">✕</span><span>5 a 15 dias na assistência técnica</span></li>
+          <li><span class="comp-icon">✕</span><span>Em 3 anos a tecnologia fica obsoleta</span></li>
+          <li><span class="comp-icon">✕</span><span>Câmera só grava — ninguém vê em tempo real</span></li>
+          <li><span class="comp-icon">✕</span><span>Levaram o gravador? Adeus, gravações</span></li>
+          <li><span class="comp-icon">✕</span><span>Manutenção avulsa: <strong>R$ 200+ por visita</strong></span></li>
+          <li><span class="comp-icon">✕</span><span>Mudou de endereço? Reinstalação por sua conta</span></li>
+        </ul>
+      </div>
+
+      <div class="comp-card good">
+        <span class="comp-tag">⭐ Aléssio Vigia</span>
+        <h3>Uma mensalidade. Tudo resolvido. Sempre.</h3>
+        <ul class="comp-list">
+          <li><span class="comp-icon">✓</span><span><strong>R$ 0</strong> de entrada</span></li>
+          <li><span class="comp-icon">✓</span><span>Quebrou? <strong>Trocamos em 24h, sem custo</strong></span></li>
+          <li><span class="comp-icon">✓</span><span>Suporte 24h via WhatsApp</span></li>
+          <li><span class="comp-icon">✓</span><span><strong>Atualizamos sua tecnologia</strong> a cada 30 meses</span></li>
+          <li><span class="comp-icon">✓</span><span>Central monitora 24h e aciona em emergências</span></li>
+          <li><span class="comp-icon">✓</span><span>Backup na nuvem — gravações sempre seguras</span></li>
+          <li><span class="comp-icon">✓</span><span>Manutenção preventiva <strong>incluída</strong></span></li>
+          <li><span class="comp-icon">✓</span><span>Mudou de endereço? <strong>Reinstalamos sem cobrar</strong></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section class="included">
+  <div class="inc-content">
+    <span class="section-eyebrow">O que está incluído</span>
+    <h2 class="section-title">Você paga uma mensalidade.<br><span class="gold">Recebe tudo isso.</span></h2>
+    <p class="section-sub">Sem taxa extra. Sem letra miúda. Sem surpresa na fatura.</p>
+
+    <div class="inc-grid">
+      <div class="inc-card">
+        <div class="inc-icon">📹</div>
+        <h3>Equipamentos novos</h3>
+        <p>Câmeras Full HD com visão noturna, gravador e sensores. Instalados por nossa equipe.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🛠️</div>
+        <h3>Instalação profissional</h3>
+        <p>Equipe técnica certificada cuida de toda a infraestrutura. Você não levanta nem uma chave.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">📡</div>
+        <h3>Monitoramento 24h</h3>
+        <p>Central ativa dia e noite. Em emergência, acionamos polícia ou você na hora.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">📱</div>
+        <h3>App no seu celular</h3>
+        <p>Veja suas câmeras de qualquer lugar do mundo. Notificações em tempo real.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">☁️</div>
+        <h3>Backup na nuvem</h3>
+        <p>Mesmo que levem o gravador, suas imagens ficam protegidas em servidores criptografados.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🔄</div>
+        <h3>Troca em 24h</h3>
+        <p>Equipamento com problema? Trocamos no mesmo dia. Sem perguntas. Sem custo.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">🔧</div>
+        <h3>Manutenção preventiva</h3>
+        <p>Visitas técnicas regulares. Limpeza, testes e atualizações. Você nem precisa lembrar.</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon">⬆️</div>
+        <h3>Atualização de tecnologia</h3>
+        <p>A cada 24-36 meses, trocamos seu kit por modelos mais modernos. Sempre atualizado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="plans" id="planos">
+  <div class="plans-content">
+    <div class="plans-header">
+      <span class="section-eyebrow">Escolha seu plano</span>
+      <h2 class="section-title">Três níveis de <span class="gold">proteção</span>.<br>Você escolhe o seu.</h2>
+      <p class="section-sub">Mensalidade fixa, sem taxa de instalação, sem letra miúda. Cancele quando quiser.</p>
+    </div>
+
+    <div class="plans-grid">
+
+      <!-- PLANO 1 -->
+      <div class="plan">
+        <div class="plan-name">Sentinela</div>
+        <div class="plan-tagline">Proteção essencial</div>
+        <div class="plan-price">
+          <div class="price-row">
+            <span class="price-currency">R$</span>
+            <span class="price-amount">249</span>
+            <span class="price-period">/mês</span>
+          </div>
+          <div class="price-note">Mensalidade fixa · sem taxa de instalação</div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span>4 câmeras Full HD com visão noturna</li>
+          <li><span class="plan-check">✓</span>Gravador com HD 1TB (30 dias)</li>
+          <li><span class="plan-check">✓</span>App mobile para visualização</li>
+          <li><span class="plan-check">✓</span>Suporte em horário comercial</li>
+          <li><span class="plan-check">✓</span>Manutenção semestral inclusa</li>
+          <li><span class="plan-check">✓</span>Substituição em até 48h</li>
+          <li><span class="plan-check">✓</span>Instalação profissional grátis</li>
+        </ul>
+        <a href="https://wa.me/5567996995728?text=Olá!%20Tenho%20interesse%20no%20plano%20Sentinela%20do%20Aléssio%20Vigia" target="_blank" class="plan-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Quero esse plano
+        </a>
+      </div>
+
+      <!-- PLANO 2 - DESTAQUE -->
+      <div class="plan featured">
+        <div class="plan-badge">⭐ Mais popular</div>
+        <div class="plan-name">Guardião</div>
+        <div class="plan-tagline">Proteção completa com monitoramento</div>
+        <div class="plan-price">
+          <div class="price-row">
+            <span class="price-currency">R$</span>
+            <span class="price-amount">399</span>
+            <span class="price-period">/mês</span>
+          </div>
+          <div class="price-note">Mensalidade fixa · sem taxa de instalação</div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span>6 a 8 câmeras com IA inteligente</li>
+          <li><span class="plan-check">✓</span>Gravador 2TB + backup na nuvem (30 dias)</li>
+          <li><span class="plan-check">✓</span><strong>Monitoramento 24h com central humana</strong></li>
+          <li><span class="plan-check">✓</span>Suporte 24h via WhatsApp</li>
+          <li><span class="plan-check">✓</span>Manutenção trimestral</li>
+          <li><span class="plan-check">✓</span><strong>Substituição em 24h</strong></li>
+          <li><span class="plan-check">✓</span>Botão de pânico + sensores de presença</li>
+          <li><span class="plan-check">✓</span>Atualização tecnológica grátis</li>
+        </ul>
+        <a href="https://wa.me/5567996995728?text=Olá!%20Tenho%20interesse%20no%20plano%20Guardião%20do%20Aléssio%20Vigia" target="_blank" class="plan-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Quero esse plano
+        </a>
+      </div>
+
+      <!-- PLANO 3 -->
+      <div class="plan">
+        <div class="plan-name">Fortaleza</div>
+        <div class="plan-tagline">Proteção premium</div>
+        <div class="plan-price">
+          <div class="price-row">
+            <span class="price-currency">R$</span>
+            <span class="price-amount">699</span>
+            <span class="price-period">/mês</span>
+          </div>
+          <div class="price-note">Mensalidade fixa · sem taxa de instalação</div>
+        </div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span>Até 16 câmeras 2K/4K com IA avançada</li>
+          <li><span class="plan-check">✓</span>Gravador 4TB + nuvem ilimitada</li>
+          <li><span class="plan-check">✓</span>Reconhecimento facial e leitura de placas</li>
+          <li><span class="plan-check">✓</span>Resposta da central em <strong>3 minutos</strong></li>
+          <li><span class="plan-check">✓</span>Gerente de conta dedicado</li>
+          <li><span class="plan-check">✓</span>Manutenção mensal</li>
+          <li><span class="plan-check">✓</span><strong>Substituição em 12h</strong></li>
+          <li><span class="plan-check">✓</span>Sistema de alarme completo</li>
+          <li><span class="plan-check">✓</span>Cerca elétrica integrada</li>
+          <li><span class="plan-check">✓</span>Relatórios mensais inteligentes</li>
+        </ul>
+        <a href="https://wa.me/5567996995728?text=Olá!%20Tenho%20interesse%20no%20plano%20Fortaleza%20do%20Aléssio%20Vigia" target="_blank" class="plan-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Quero esse plano
+        </a>
+      </div>
+
+    </div>
+
+    <p class="plans-disclaimer">
+      ✦ Não sabe qual escolher? <a href="https://wa.me/5567996995728?text=Olá!%20Quero%20ajuda%20para%20escolher%20o%20plano%20ideal" target="_blank" style="color: var(--gold); text-decoration: underline;">Fale com a gente</a> — fazemos uma visita técnica grátis para indicar o ideal para você.
+    </p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="how-content">
+    <span class="section-eyebrow">Como funciona</span>
+    <h2 class="section-title">Da primeira mensagem até a<br><span class="gold">tranquilidade</span> em 4 passos.</h2>
+
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Você fala com a gente</h3>
+        <p>Chama no WhatsApp e conta o que precisa proteger.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Visita técnica grátis</h3>
+        <p>Vamos até você, avaliamos o local e fazemos a proposta.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Instalamos tudo</h3>
+        <p>Em 3 a 7 dias seu sistema está funcionando 100%.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Você dorme tranquilo</h3>
+        <p>A gente cuida do resto. Pra sempre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guarantee-content">
+    <div class="seal">G</div>
+    <span class="section-eyebrow">Garantia exclusiva Aléssio Vigia</span>
+    <h2>Se nosso sistema falhar,<br>devolvemos 6 meses de mensalidade.</h2>
+    <p>Se houver uma invasão e nosso sistema <strong>não acionar a central</strong> ou <strong>não gravar as imagens</strong> corretamente, devolvemos <strong>6 meses de mensalidade</strong>.</p>
+    <p style="font-size: 1rem; color: var(--mist); margin-top: 1.5rem;">Porque segurança não é promessa. É compromisso.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-content">
+    <div class="faq-header">
+      <span class="section-eyebrow">Dúvidas frequentes</span>
+      <h2 class="section-title">Perguntas que <span class="gold">todo mundo faz</span></h2>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>E se eu quiser cancelar?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          O contrato é de 12 meses, mas você pode cancelar antes pagando uma multa proporcional baixa. Nosso churn é menor que 3% — quem entra, fica.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>O equipamento é meu ou de vocês?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          O equipamento é nosso. Por isso conseguimos cobrar uma mensalidade baixa, fazer a manutenção, trocar quando quebra e atualizar quando fica obsoleto. Você fica com o serviço — a tranquilidade.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Em quanto tempo é instalado?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Após o fechamento do contrato, instalamos em 3 a 7 dias úteis. Em casos de urgência, conseguimos antecipar.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Atendem fora de Mato Grosso do Sul?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Atendemos toda a região de Mato Grosso do Sul. Para outras localidades, entre em contato pelo WhatsApp para verificarmos a viabilidade.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>E se levarem o gravador?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Suas gravações ficam salvas também na nuvem. Mesmo que o gravador seja levado, você acessa as imagens pelo aplicativo. E nós trocamos o equipamento sem custo adicional.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Funciona se faltar luz?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Sim. Instalamos no-break para manter o sistema funcionando mesmo com falta de energia. A central de monitoramento é avisada automaticamente em caso de problemas.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Posso aumentar o número de câmeras depois?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Claro! É só nos avisar e ajustamos o plano conforme sua necessidade. Quer mais câmeras, sensores ou cobertura? A gente adapta.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-content">
+    <span class="section-eyebrow">Vamos começar?</span>
+    <h2>Sua segurança não pode <span class="gold">esperar</span>.</h2>
+    <p>Solicite agora seu orçamento personalizado pelo WhatsApp. A gente responde em minutos.</p>
+
+    <div class="cta-benefits">
+      <div class="cta-benefit">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Visita técnica grátis
+      </div>
+      <div class="cta-benefit">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Sem compromisso
+      </div>
+      <div class="cta-benefit">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Resposta em até 2h
+      </div>
+    </div>
+
+    <a href="https://wa.me/5567996995728?text=Olá!%20Quero%20um%20orçamento%20do%20Aléssio%20Vigia" target="_blank" class="btn-whatsapp-big">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Quero meu orçamento agora
+    </a>
+
+    <p class="cta-phone">
+      Ou ligue: <strong>(67) 99699-5728</strong>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">
+    <svg class="shield-logo" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 2 L75 15 L75 50 Q75 75 40 88 Q5 75 5 50 L5 15 Z" fill="url(#shieldGold)" stroke="#a87f0d" stroke-width="1.5"/>
+      <path d="M40 8 L70 18 L70 50 Q70 70 40 82 Q10 70 10 50 L10 18 Z" fill="url(#shieldRed)"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-name">ALÉSSIO VIGIA</span>
+      <span class="logo-tag">Por Aléssio Segurança</span>
+    </div>
+  </div>
+  <p><strong>Aléssio Vigia</strong> é um produto de Aléssio Soluções em Serviços e Segurança</p>
+  <p style="margin-top: 1rem;">📱 (67) 99699-5728 · 📷 @alessio_seguranca</p>
+  <p style="margin-top: 1rem;">© 2026 Aléssio Segurança · Todos os direitos reservados</p>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/5567996995728?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Aléssio%20Vigia" target="_blank" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.comp-card, .inc-card, .step, .guarantee-content, .faq-item, .plan').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
