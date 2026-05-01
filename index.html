@@ -355,5 +355,11 @@ footer{background:var(--navy-dark);padding:2.5rem 2rem;text-align:center;border-
 document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const a=b.classList.contains('active');document.querySelectorAll('.faq-q').forEach(x=>{x.classList.remove('active');x.nextElementSibling.style.maxHeight='0'});if(!a){b.classList.add('active');b.nextElementSibling.style.maxHeight=b.nextElementSibling.scrollHeight+'px'}})});
 window.addEventListener('scroll',()=>{const n=document.querySelector('nav');n.style.background=window.scrollY>50?'rgba(10,20,40,.98)':'rgba(10,20,40,.95)';n.style.boxShadow=window.scrollY>50?'0 4px 20px rgba(0,0,0,.3)':'none'});
 </script>
+
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
