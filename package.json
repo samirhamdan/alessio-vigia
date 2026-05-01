@@ -1,0 +1,17 @@
+{
+  "name": "alessio-vigia",
+  "version": "1.0.0",
+  "description": "Aléssio Vigia - Segurança por assinatura",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static HTML - no build required'",
+    "deploy": "vercel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
