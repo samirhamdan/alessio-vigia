@@ -353,5 +353,11 @@ footer{background:var(--dark);border-top:1px solid rgba(37,99,255,.15);padding:2
 <script>
 document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const a=b.classList.contains('active');document.querySelectorAll('.faq-q').forEach(x=>{x.classList.remove('active');x.nextElementSibling.style.maxHeight='0'});if(!a){b.classList.add('active');b.nextElementSibling.style.maxHeight=b.nextElementSibling.scrollHeight+'px'}})});
 </script>
+
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
